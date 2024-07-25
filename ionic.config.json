@@ -1,0 +1,7 @@
+{
+  "name": "DoNothing",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
