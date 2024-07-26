@@ -16,10 +16,10 @@ export class AppComponent {
   public appPages = [
     { title: 'Home', url: '/home', icon: 'home' },
     { title: 'Welcome', url: '/welcome-screen', icon: 'Welcome' },
-    { title: 'User Details', url: '/user-details', icon: 'user' },
+    // { title: 'User Details', url: '/user-details', icon: 'user' },
     { title: 'Error', url: '/error', icon: 'warning' },
   ];
-  public labels = ['Family',  'Reminders'];
+  public labels = ['Family', 'Reminders'];
   constructor() {
     addIcons({ mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutline, heartSharp, archiveOutline, archiveSharp, trashOutline, trashSharp, warningOutline, warningSharp, bookmarkOutline, bookmarkSharp, });
   }
