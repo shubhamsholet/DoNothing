@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {
   IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent,
@@ -15,12 +15,21 @@ import {
     CommonModule, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent,
   ],
 })
+
+
 export class UsercardComponent implements OnInit {
+
+  @Input() userdata: any = {}
+
   constructor(private routes: Router) { }
 
-  ngOnInit() { }
-  userDetails() {
+  ngOnInit() {
+    console.log("userdata==", this.userdata);
+
+  }
+  userDetails(userInfo: any) {
     console.log('user details btn clicked');
-    this.routes.navigate(['/user-details'])
+    this.routes.navigate(['/user-details']);
+
   }
 }

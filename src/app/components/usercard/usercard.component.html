@@ -3,17 +3,16 @@
     <ion-card-title>
       <div class="row">
         <div class="col-2">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/640px-User_icon_2.svg.png"
-            alt="" class="w-100">
+          <img [src]="userdata['userPhoto']" alt="" class="w-100">
         </div>
         <div class="col ">
-          <h1>Name</h1>
+          <h1>{{userdata['name']}}</h1>
         </div>
         <div class="col">
-          <h5>age: 22</h5>
+          <h5>age: {{userdata['age']}}</h5>
         </div>
         <div class="col">
-          <h5>height</h5>
+          <h5>height: {{userdata['height']}}</h5>
         </div>
         <div class="col">
           <h5>Rs 200</h5>
@@ -21,14 +20,14 @@
       </div>
     </ion-card-title>
     <ion-card-subtitle class="d-flex ion-justify-content-between">
-      <p> Rating : 4.3 </p>
-      <p>phone number</p>
-      <p>email</p>
+      <p> Rating : {{userdata['rating']}} </p>
+      <p>P.No. {{userdata['phone']}}</p>
+      <p>Mail: {{userdata['email']}}</p>
       <p></p>
     </ion-card-subtitle>
   </ion-card-header>
   <ion-card-content>
-    <button type="button" class="btn btn-outline-primary" (click)="userDetails()">User details</button>
+    <button type="button" class="btn btn-outline-primary" (click)="userDetails(userdata)">User details</button>
   </ion-card-content>
 
 </ion-card>
