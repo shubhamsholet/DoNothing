@@ -6,7 +6,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar ,IonCard,IonCardHeader,IonC
   templateUrl: './usercard.component.html',
   styleUrls: ['./usercard.component.scss'],
   standalone:true,
-  imports:[CommonModule,IonContent,IonCard,IonCardHeader,IonCardTitle,IonCardSubtitle,IonCardContent],
+  imports:[CommonModule ,IonContent,IonCard,IonCardHeader,IonCardTitle,IonCardSubtitle,IonCardContent],
 })
 export class UsercardComponent  implements OnInit {
 
