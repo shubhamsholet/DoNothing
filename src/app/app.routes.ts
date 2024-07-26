@@ -17,13 +17,7 @@ export const routes: Routes = [
         (m) => m.WelcomeScreenPage
       ),
   },
-  {
-    path: 'user-details',
-    loadComponent: () =>
-      import('./pages/user-details/user-details.page').then(
-        (m) => m.UserDetailsPage
-      ),
-  },
+
   {
     path: '',
     redirectTo: 'home',
