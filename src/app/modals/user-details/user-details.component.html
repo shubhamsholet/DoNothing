@@ -1,8 +1,25 @@
-<div class="d-flex ion-justify-content-between ion-padding">
-  <p>hello , {{userinfo['name']}} !</p>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="d-flex ion-justify-content-between ion-padding">
+      <h2>User full details</h2>
+      <ion-buttons>
+        <ion-button (click)="close()">Close</ion-button>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding ">
 
+  <img [src]="userinfo['userPhoto']" alt="user photo" class="userPhoto">
+  <ion-row>
 
-  <ion-buttons>
-    <ion-button (click)="close()">Close</ion-button>
-  </ion-buttons>
-</div>
+    <ion-col size="4"> <b> Name : </b> {{userinfo['name']}}</ion-col>
+    <ion-col size="4"> <b> Age : </b> {{userinfo['age']}}</ion-col>
+    <ion-col size="4"> <b> Height : </b> {{userinfo['height']}}</ion-col>
+    <ion-col size="4"> <b> Language Known : </b> {{userinfo['language']}}</ion-col>
+    <ion-col size="4"> <b> Phone Number : </b> {{userinfo['phone']}}</ion-col>
+    <ion-col size="4"> <b> Email : </b> {{userinfo['email']}}</ion-col>
+    <ion-col size="4"> <b> Rating : </b> {{userinfo['rating']}}</ion-col>
+
+  </ion-row>
+</ion-content>
