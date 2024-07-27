@@ -17,7 +17,10 @@ export const routes: Routes = [
         (m) => m.WelcomeScreenPage
       ),
   },
-
+  {
+    path: 'register',
+    loadComponent: () => import('./pages/register/register.page').then(m => m.RegisterPage)
+  },
   {
     path: '',
     redirectTo: 'home',
@@ -28,4 +31,5 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/error/error.page').then((p) => p.ErrorPage),
   },
+
 ];

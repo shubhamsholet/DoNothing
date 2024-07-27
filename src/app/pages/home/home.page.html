@@ -5,8 +5,19 @@
 </ion-header>
 
 <ion-content>
-  @for (user of userslist; track $index) {
 
+  <br>
+  <br>
+  <br>
+  <app-login></app-login>
+  <br>
+  <br>
+  <br>
+
+
+
+  <!-- for card display -->
+  @for (user of userslist; track $index) {
   <app-usercard [userdata]="user"></app-usercard>
   }
 
