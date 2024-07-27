@@ -36,6 +36,7 @@ export class UsercardComponent implements OnInit {
     console.log('user details btn clicked');
     const modal = await this.modalCtrl.create({
       component: UserDetailsComponent,
+      cssClass: "userdetilComponent",
       componentProps: { userinfo: userdata }
     });
 

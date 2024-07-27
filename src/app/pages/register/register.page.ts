@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonButton, IonSelectOption, IonCol, IonRow } from '@ionic/angular/standalone';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
   standalone: true,
-  imports: [IonRow, IonCol, IonButton, IonLabel, IonItem, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, ReactiveFormsModule, IonSelectOption]
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    IonicModule
+  ]
 })
 export class RegisterPage implements OnInit {
 
@@ -27,9 +31,7 @@ export class RegisterPage implements OnInit {
     });
   }
 
-
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   onFileChange(event: any) {
     const file = event.target.files[0];
@@ -44,5 +46,4 @@ export class RegisterPage implements OnInit {
       // Handle the form submission logic here
     }
   }
-
 }
