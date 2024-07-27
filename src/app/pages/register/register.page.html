@@ -1,13 +1,81 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-title>Registration</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="registrationForm" (ngSubmit)="onRegister()">
+    <ion-row class="">
+      <ion-col size="6">
+        <ion-item>
+          <ion-label class="mb-3" position="floating">Name</ion-label>
+          <ion-input formControlName="name" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-item>
+          <ion-label class="mb-3" position="floating">Age</ion-label>
+          <ion-input formControlName="age" type="number"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-item>
+          <ion-label class="mb-3" position="floating">Height</ion-label>
+          <ion-input formControlName="height" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-item>
+          <ion-label class="mb-3" position="floating">Languages Known</ion-label>
+          <ion-input formControlName="languages" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-item>
+          <ion-label class="mb-3">Photo Upload</ion-label>
+          <input type="file" (change)="onFileChange($event)" />
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-item>
+          <ion-label class="mb-3" position="floating">Phone Number</ion-label>
+          <ion-input formControlName="phone" type="tel"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-item>
+          <ion-label class="mb-3" position="floating">Email</ion-label>
+          <ion-input formControlName="email" type="email"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-item>
+          <ion-label class="mb-3">Service Option</ion-label>
+          <ion-select formControlName="serviceOption">
+            <ion-select-option value="offer">Offer Service</ion-select-option>
+            <ion-select-option value="hire">Hire Person</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item lines="none">
+          <ion-checkbox slot="start" formControlName="terms"></ion-checkbox>
+          <ion-label class="mb-3">I agree to the terms and conditions</ion-label>
+        </ion-item>
+      </ion-col>
+      <div class="pb-5 w-100">
+        <ion-button expand="full" type="submit" [disabled]="!registrationForm.valid">Register</ion-button>
+
+      </div>
+    </ion-row>
+  </form>
 </ion-content>
